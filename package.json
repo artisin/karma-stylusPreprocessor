@@ -1,0 +1,34 @@
+{
+  "name": "karma-styluspreprocessor",
+  "version": "0.0.1",
+  "description": "A Karma plugin. Compile stylus on the fly.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/artisin/karma-stylusPreprocessor"
+  },
+  "keywords": [
+    "karma-plugin",
+    "karma-preprocessor",
+    "stylus",
+    "styluscss",
+    "stylus-css"
+  ],
+  "author": "Tyler Schultz <tschultztt@gmail.com>",
+  "dependencies": {
+    "accord": "^0.15.2",
+    "stylus": "*",
+    "path": "0.11.14"
+  },
+  "engines": {
+    "node": ">= 0.9.0"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/artisin/karma-stylusPreprocessor/issues"
+  },
+  "homepage": "https://github.com/artisin/karma-stylusPreprocessor",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
