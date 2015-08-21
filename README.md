@@ -10,9 +10,15 @@
 ```js
 module.exports = {
   frameworks: ['mocha', 'sinon-chai'],
-  files: [//..],
-  exclude:[//..],
-  watch: [//..],
+  files: [
+  	//..
+  ],
+  exclude:[
+  	//..
+  ],
+  watch: [
+  	//..
+  ],
   preprocessors: {
     'app/assets/js/__tests__/**/*.styl': ['stylus']
   },
