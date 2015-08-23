@@ -6,7 +6,8 @@ var createStylusPreprocessor = function (args, config, logger, helper) {
   config = config || {};
   var defaultOptions = {
     compress: false,
-    save: false
+    save: false,
+    logPath: false
   };
   var options = helper.merge(defaultOptions, args.options || {}, config.options || {});
 
@@ -39,7 +40,9 @@ var createStylusPreprocessor = function (args, config, logger, helper) {
 
   return function (content, file, done) {
     file.path = transformPath(file.originalPath);
-
+    if (options.logPath) {
+      console.log(file.path);
+    }
     try {
       stylus.render(content, options, rendered.bind(null, done, file.path));
     } catch (error) {
