@@ -7,7 +7,7 @@ var createStylusPreprocessor = function (args, config, logger, helper) {
   var defaultOptions = {
     compress: false,
     save: false,
-    logPath: false
+    logErrorPath: false
   };
   var options = helper.merge(defaultOptions, args.options || {}, config.options || {});
 
@@ -43,7 +43,7 @@ var createStylusPreprocessor = function (args, config, logger, helper) {
     try {
       stylus.render(content, options, rendered.bind(null, done, file.path));
     } catch (error) {
-      if (options.logPath) {
+      if (options.logErrorPath) {
         console.log("Error Path:" + file.path);
       }
       log.error('%s\n  at %s', error.message, file.originalPath);
