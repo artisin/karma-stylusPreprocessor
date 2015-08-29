@@ -40,12 +40,12 @@ var createStylusPreprocessor = function (args, config, logger, helper) {
 
   return function (content, file, done) {
     file.path = transformPath(file.originalPath);
-    if (options.logPath) {
-      console.log(file.path);
-    }
     try {
       stylus.render(content, options, rendered.bind(null, done, file.path));
     } catch (error) {
+      if (options.logPath) {
+        console.log("Error Path:" + file.path);
+      }
       log.error('%s\n  at %s', error.message, file.originalPath);
       return;
     }
