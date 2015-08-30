@@ -1,6 +1,6 @@
 {
   "name": "karma-styluspreprocessor",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "A Karma plugin. Compile stylus on the fly.",
   "repository": {
     "type": "git",
