@@ -39,6 +39,7 @@ var createStylusPreprocessor = function (args, config, logger, helper) {
 
   return function (content, file, done) {
     file.path = transformPath(file.originalPath);
+
     try {
       stylus.render(content, options, rendered.bind(null, done, file.path));
     } catch (error) {
