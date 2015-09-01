@@ -28,7 +28,4 @@
   },
   "homepage": "https://github.com/artisin/karma-stylusPreprocessor",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  }
 }
