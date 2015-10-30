@@ -23,7 +23,7 @@ var createStylusPreprocessor = function (args, config, logger, helper) {
       if (options.save) {
         var p = path.resolve(filePath.replace(/\/([\.a-zA-Z0-9\-\_]+).css$/, '/'));
         helper.mkdirIfNotExists(p, function () {
-          var n = filePath.match(/[a-zA-Z\-\.\_]+.css$/).reverse()[0];
+          var n = filePath.match(/[a-zA-Z0-9\-\.\_]+.css$/).reverse()[0];
           fs.writeFile(path.join(p, n), content, 'utf-8', function (error) {
             if (error) {
               log.error("Error:%s", error);
