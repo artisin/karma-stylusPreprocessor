@@ -18,7 +18,7 @@ var createStylusPreprocessor = function (args, config, logger, helper) {
 
   var rendered = function (done, filePath, error, content) {
     if (error !== null && error !== undefined) {
-      log.error('Error:%s\n', error);
+      log.error(error);
     } else {
       if (options.save) {
         var p = path.resolve(filePath.replace(/\/([\.a-zA-Z0-9\-\_]+).css$/, '/'));
@@ -26,7 +26,7 @@ var createStylusPreprocessor = function (args, config, logger, helper) {
           var n = filePath.match(/[a-zA-Z0-9\-\.\_]+.css$/).reverse()[0];
           fs.writeFile(path.join(p, n), content, 'utf-8', function (error) {
             if (error) {
-              log.error("Error:%s", error);
+              log.error(error);
             }
             done(content);
           });
@@ -43,7 +43,8 @@ var createStylusPreprocessor = function (args, config, logger, helper) {
     try {
       stylus.render(content, options, rendered.bind(null, done, file.path));
     } catch (error) {
-      log.error('%s\n  at %s', error.message, file.originalPath);
+      log.error(file.originalPath);
+      log.error(error.message);
       return;
     }
   };
