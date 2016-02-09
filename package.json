@@ -1,6 +1,6 @@
 {
   "name": "karma-styluspreprocessor",
-  "version": "0.1.6",
+  "version": "0.2.1",
   "description": "A Karma plugin. Compile stylus on the fly.",
   "repository": {
     "type": "git",
@@ -13,11 +13,11 @@
     "styluscss",
     "stylus-css"
   ],
-  "author": "Tyler Schultz <tschultztt@gmail.com>",
+  "author": "Tē </artisin> <te.artisin@gmail.com>",
   "dependencies": {
-    "accord": "^0.20.1",
-    "stylus": "0.52.0",
-    "path": "0.11.14"
+    "accord": "0.22.1",
+    "stylus": "0.53.0",
+    "path": "0.12.7"
   },
   "engines": {
     "node": ">= 0.9.0"

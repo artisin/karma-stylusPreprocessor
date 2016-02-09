@@ -18,6 +18,7 @@ var createStylusPreprocessor = function (args, config, logger, helper) {
 
   var rendered = function (done, filePath, error, content) {
     if (error !== null && error !== undefined) {
+      log.error(filePath);
       log.error(error);
     } else {
       if (options.save) {
